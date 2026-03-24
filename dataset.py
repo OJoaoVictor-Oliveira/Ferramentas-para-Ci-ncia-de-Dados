@@ -16,9 +16,7 @@ df = orders.merge(customers, on='customer_id', how='left') \
 df.info()
 print(df.columns)
 
-# Excluindo linhas de pedidos não entregues
 
-orders = orders[orders['order_status'] == 'delivered']
 
 # Excluindo colunas que não fazem sentido para a análise
 colunas_para_remover = ['order_approved_at', 'order_delivered_carrier_date', 'shipping_limit_date', 'product_name_lenght', 'product_weight_g', 'product_length_cm', 'product_height_cm', 'product_width_cm', 'review_comment_title', 'review_comment_message', 'review_answer_timestamp', 'customer_unique_id', 'customer_zip_code_prefix']
